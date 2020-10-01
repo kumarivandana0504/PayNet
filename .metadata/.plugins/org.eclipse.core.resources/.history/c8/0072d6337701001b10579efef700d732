@@ -1,0 +1,5 @@
+package com.paynet.configuration;
+
+public class ApplicationSecurityConfiguration {
+
+}

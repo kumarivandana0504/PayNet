@@ -1,0 +1,5 @@
+package com.paynet.beans;
+
+public class Transfer {
+
+}

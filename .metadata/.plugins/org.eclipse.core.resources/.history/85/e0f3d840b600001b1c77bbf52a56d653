@@ -1,0 +1,21 @@
+package com.paynet.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.paynet.beans.Transfer;
+import com.paynet.repo.TransferRepo;
+
+public class TransferMoneyImpl implements TransferMoney {
+
+
+	@Autowired
+	private TransferRepo transferrepo;
+	
+
+	@Override
+	public void money(Transfer transfer) {
+		
+		
+	}
+
+}

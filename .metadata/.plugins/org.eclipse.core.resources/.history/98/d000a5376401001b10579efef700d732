@@ -1,0 +1,95 @@
+package com.paynet.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.paynet.beans.TopUp;
+import com.paynet.beans.Transfer;
+import com.paynet.beans.User;
+import com.paynet.service.TopupMoney;
+import com.paynet.service.TransferMoney;
+import com.paynet.service.UserService;
+
+/*    for index        */
+@Controller
+public class IndexController {
+	@RequestMapping("/index")
+	public String show() {
+		
+		System.out.println("hi");
+		
+		return "index";
+	}
+	@Autowired
+	private UserService userservice;
+	
+	@GetMapping("/registration")
+	public String registration(Model model) {
+		model.addAttribute("UserForm",new User());
+		
+		return "register";
+	}
+	
+	@PostMapping("/registration")
+	public String registration(@ModelAttribute("UserForm") User userForm,BindingResult bindingResult) {
+		
+		
+		
+		userservice.insertUser(userForm);
+		
+		return "redirect:/successfull";
+	}
+	
+	
+	
+	/*        Work for Transer money                           */
+	
+	@Autowired
+	private TransferMoney transfermoney;
+	
+	@GetMapping("/transfer")
+	public String registration1(Model model) {
+		model.addAttribute("Transfer",new Transfer());
+		
+		return "transfer";
+	}
+	
+	@PostMapping("/transfer")
+	public String registration(@ModelAttribute("Transfer") Transfer transfer,BindingResult bindingResult) {
+		
+		
+		
+		transfermoney.money(transfer);
+		
+		return "redirect:/successfull";
+	}
+@RequestMapping("/successfull")
+	public String success() {
+		return "successfull";
+	}
+
+/*   work of topup    */
+
+	@Autowired
+	private TopupMoney topupmoney;
+	
+	@GetMapping("/topup")
+	public String registration2(Model model) {
+		model.addAttribute("TopUp",new TopUp());
+		return "topup";
+	}
+	@PostMapping("/topup")
+	public String registration(@ModelAttribute("TopUp") TopUp topup,BindingResult bindingresult) {
+		topupmoney.topup(topup);
+		return "successfull";
+	}
+
+
+	
+}

@@ -1,0 +1,7 @@
+package com.paynet.configuration;
+
+@Configuration
+@EnableWebSecurity
+public class ApplicationSecurityConfiguration  extends WebSecurityConfigurerAdapter{
+
+}

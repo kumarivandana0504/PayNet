@@ -1,0 +1,5 @@
+package com.paynet.repo;
+
+public interface TopUpRepo {
+
+}

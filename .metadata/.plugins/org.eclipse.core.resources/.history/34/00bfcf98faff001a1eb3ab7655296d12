@@ -1,0 +1,5 @@
+package com.paynet.controller;
+
+public class IndexController {
+
+}

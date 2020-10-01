@@ -1,0 +1,9 @@
+package com.paynet.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.paynet.beans.Transfer;
+
+public interface TransferRepo extends JpaRepository<Transfer, Long> {
+
+}

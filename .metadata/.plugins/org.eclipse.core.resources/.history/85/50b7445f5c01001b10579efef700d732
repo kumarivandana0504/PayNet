@@ -1,0 +1,19 @@
+package com.paynet.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.paynet.beans.TopUp;
+import com.paynet.repo.TopUpRepo;
+
+public class TopupMoneyImp {
+
+	@Autowired
+	private TopUpRepo topuprepo;
+	
+
+	public void money(TopUp topup) {
+		
+		topuprepo.save(topup);
+		
+	}
+}

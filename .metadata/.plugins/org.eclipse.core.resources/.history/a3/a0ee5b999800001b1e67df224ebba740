@@ -1,0 +1,9 @@
+
+spring.mvc.view.prefix=/WEB-INF/view/
+spring.mvc.view.suffix=.jsp
+spring.mvc.static-path-pattern=/resources/static/**
+
+spring.datasource.url=jdbc:mysql://localhost:3306/Paynet?useSSL=false
+
+spring.datasource.username=root
+spring.datasource.password=

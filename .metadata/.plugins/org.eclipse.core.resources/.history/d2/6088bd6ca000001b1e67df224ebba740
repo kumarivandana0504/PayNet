@@ -1,0 +1,5 @@
+package com.paynet.service;
+
+public class UserServiceImp {
+
+}

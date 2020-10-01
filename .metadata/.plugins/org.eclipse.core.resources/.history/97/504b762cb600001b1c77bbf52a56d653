@@ -1,0 +1,17 @@
+package com.paynet.service;
+
+import com.paynet.beans.Transfer;
+
+public class TransferMoneyImpl implements TransferMoney {
+
+
+	
+	
+
+	@Override
+	public void money(Transfer transfer) {
+		
+		
+	}
+
+}

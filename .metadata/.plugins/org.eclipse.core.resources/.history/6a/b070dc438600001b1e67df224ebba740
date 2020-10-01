@@ -1,0 +1,4 @@
+
+spring.mvc.view.prefix=/WEB-INF/view/
+spring.mvc.view.suffix=.jsp
+spring.mvc.static_path_pattern=/resources/static/**

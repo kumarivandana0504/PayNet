@@ -1,0 +1,8 @@
+package com.paynet.service;
+
+import com.paynet.beans.TopUp;
+
+public interface TopupMoney {
+
+	void topup(TopUp topup) ;
+}

@@ -1,0 +1,9 @@
+package com.paynet.service;
+
+import com.paynet.beans.User;
+
+public interface UserService {
+
+	void insertUser(User user);
+	
+}

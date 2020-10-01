@@ -1,0 +1,11 @@
+package com.paynet.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.paynet.beans.TopUp;
+
+@Repository
+public interface TopUpRepo extends JpaRepository< TopUp, Long>{
+
+}

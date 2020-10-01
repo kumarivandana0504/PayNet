@@ -1,0 +1,11 @@
+package com.paynet.service;
+
+public class TransferMoneyImpl implements TransferMoney {
+
+	@Override
+	public void money(TransferMoney transfer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

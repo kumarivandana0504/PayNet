@@ -1,0 +1,18 @@
+package com.paynet.beans;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name="User_Information")
+@Data
+public class User {
+	@Id
+	private long id;
+	private String username;
+	private String mobile;
+	private String password;
+}

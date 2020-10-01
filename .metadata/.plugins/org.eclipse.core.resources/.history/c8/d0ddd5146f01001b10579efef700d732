@@ -1,0 +1,58 @@
+package com.paynet.beans;
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name="Add_Money")
+@Data
+public class TopUp {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
+	private String accname;
+	private String mobile;
+	private String money;
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getAccName() {
+		return accname;
+	}
+	public void setAccName(String accname) {
+		this.accname = accname;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getMoney() {
+		return money;
+	}
+	public void setMoney(String money) {
+		this.money = money;
+	}
+	public TopUp(String accname, String mobile, String money) {
+		super();
+		this.accname = accname;
+		this.mobile = mobile;
+		this.money = money;
+	}
+	public TopUp() {
+		
+	}
+	
+	
+}

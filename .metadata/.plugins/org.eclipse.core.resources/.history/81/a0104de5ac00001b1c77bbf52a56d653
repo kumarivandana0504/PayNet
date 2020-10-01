@@ -1,0 +1,49 @@
+package com.paynet.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.paynet.beans.User;
+import com.paynet.service.UserService;
+
+@Controller
+public class IndexController {
+	@RequestMapping("/index")
+	public String show() {
+		
+		System.out.println("hi");
+		
+		return "index";
+	}
+	@Autowired
+	private UserService userservice;
+	
+	@GetMapping("/newRegistration")
+	public String registration(Model model) {
+		model.addAttribute("UserForm",new User());
+		
+		return "demo";
+	}
+	
+	@PostMapping("/newRegistration")
+	public String registration(@ModelAttribute("UserForm") User userForm,BindingResult bindingResult) {
+		
+		
+		
+		userservice.insertUser(userForm);
+		
+		return "redirect:/successfull";
+	}
+@RequestMapping("/successfull")
+	public String success() {
+		return "successfull";
+	}
+	
+	
+}

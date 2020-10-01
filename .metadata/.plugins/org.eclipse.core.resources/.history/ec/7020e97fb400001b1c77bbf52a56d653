@@ -1,0 +1,11 @@
+package com.paynet.service;
+
+import com.paynet.beans.Transfer;
+import com.paynet.beans.User;
+
+public interface TransferMoney {
+
+	void money(TransferMoney transfer);
+	
+}
+
